@@ -4,12 +4,12 @@ A boot up solution for launching WHDLoad games for UAE based Amiga emulators
 
 # Features
 
-* Multiple WHDLoad game slave files
+* Locates the slave file automatically - no need to rename it to game.slave
+* Detects multiple WHDLoad game slave files
    * WHDLoad game slave file selected based the volume name of DH1:
    * WHDLoad game slave file selection via a user choice dialogue.
-* Single WHDLoad game slave file:
-   * Just gets launched normally.
-* No WHDLoad game slave file
+* Single WHDLoad game slave file just gets launched normally.
+* When no WHDLoad game slave file detected
    * A game launcher is launched.
      - GAMES: is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
@@ -40,6 +40,8 @@ When a **Directory** (or **Archive** or **Plain File**) is used, you **can** spe
 
 Thus, if you have multiple game slave files in your WHDL game partition and want to specify the game slave version to launch, the WHDLoad game must be mounted as a **Directory**. Otherwise, a user selection dialogue will be used to ask the user to select a game slave file to launch.
 
+**It is also recommended that both the WHDLoad DH0: and Game/Games DH1 partition are mount as as a directories - it just makes make changes to them much easier on the host emaulation system.**
+
 # WHDLoad
 
 * At the moment, individual games are launched using WHDLoad and specifying the **PRELOAD** option.
@@ -47,6 +49,12 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
 * Tooltypes:
    - If a .tooltypes file is found for the slave file, the options found in this will be used to launch the game.
    - Some WHDLoad game launchers automatically generate the .tooltypes for each game slave it finds.
+
+# Game Launcher
+
+Currently, the excellent **TinyLauncher* is included.
+
+http://ohmygibs.free.fr/ohmygibs/TinyLauncher.html
 
 # To Do / Roadmap
 
@@ -56,4 +64,7 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
    - Or method to extract the tooltypes values on the fly?
    - Some WHDLoad launchers support tooltypes - but need NewIcons support?
 * Better multiple game slave selector:
-   - ABS (Amiga Boot Selector)? 
+   - ABS (Amiga Boot Selector)?
+* More Game Launchers?
+  - X-bench
+  - AGS
