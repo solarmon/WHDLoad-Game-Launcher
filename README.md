@@ -2,12 +2,19 @@
 
 A boot up solution for launching WHDLoad games for UAE based Amiga emulators
 
+Two release version files are provided:
+
+* .zip - this is the recommended **Directory** version. Unzip this and mount as a directory (DH0:) in UAE.
+* .hdf - this si the legacy HDF version
+
+Both version need to have the appropriate kickstart ROMs put in to the Dev/Kickstarts directory.
+
 # Features
 
 * Locates the slave file automatically - no need to rename it to game.slave
 * Detects multiple WHDLoad game slave files
    * WHDLoad game slave file selected based the volume name of DH1:
-   * WHDLoad game slave file selection via a user choice dialogue.
+   * WHDLoad game slave file selection via a selection dialogue.
 * Single WHDLoad game slave file just gets launched normally.
 * When no WHDLoad game slave file detected
    * A game launcher is launched.
@@ -16,9 +23,14 @@ A boot up solution for launching WHDLoad games for UAE based Amiga emulators
 
 # Requirements
 
-* DH0: is the boot drive
+* Kickstarts - you need to put your kickstarts (including rom.key for kickstarts provided by Cloanto Amiga Forever) in the Dev/Kickstarts directory
+  - To edit/manage the HDF file on Windows you can use ADF Opus (http://adfopus.sourceforge.net/)
+  - See the the following guides for further details:
+https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/ http://lindqvist.synology.me/wordpress/?page_id=182
+
+* DH0: is the WHDLoad boot drive
 * DH1: is the game or games drive
-* For indivudal WHDLoad games (including single and multiple game slaves) the slave files must be on the root of DH1:
+* For indivudal WHDLoad (in a directory, not in a .hdf file) games, the slave file(s) must be on the root of mounted directory (DH1:). Subdirectories are not supported.
 * For WHDLoad game collections mount on DH1: it is up to the game launcher scan for games, including subedirectories.
 * WHDLoad game slave file as DH1: volume name:
    - DH1: must be mounted as a Directory, nor a Hardfile (HDF)
@@ -38,7 +50,7 @@ However, when a **Hardfile** HDF file is used, the **volume name** is taken from
 
 When a **Directory** (or **Archive** or **Plain File**) is used, you **can** specify the volume name.
 
-Thus, if you have multiple game slave files in your WHDL game partition and want to specify the game slave version to launch, the WHDLoad game must be mounted as a **Directory**. Otherwise, a user selection dialogue will be used to ask the user to select a game slave file to launch.
+Thus, if you have multiple game slave files in your WHDL game partition and want to specify the game slave version to launch, the WHDLoad game must be mounted as a **Directory** and the slave file name provided as the volume name. Otherwise, a selection dialogue will be used to ask the user to select a game slave file to launch.
 
 **It is also recommended that both the WHDLoad DH0: and Game/Games DH1 partition are mount as as a directories - it just makes make changes to them much easier on the host emaulation system.**
 
@@ -53,6 +65,8 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
 # Game Launcher
 
 Currently, the excellent **TinyLauncher* is included.
+
+On first run, you will need configure it and scan for your games in DH1:, or GAMES:
 
 http://ohmygibs.free.fr/ohmygibs/TinyLauncher.html
 
