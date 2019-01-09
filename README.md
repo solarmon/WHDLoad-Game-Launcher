@@ -20,6 +20,7 @@ Both version will need to have the appropriate kickstart ROMs put in to the **De
    * A game launcher is launched.
      - GAMES: is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
+* WHDload options from Tool Types support if a previously generated .tooltypes file is present.
 
 # Requirements
 
@@ -66,9 +67,9 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
 
 Currently, the excellent **TinyLauncher* is included.
 
-On first run, you will need configure it and scan for your games in DH1:, or GAMES:
-
 http://ohmygibs.free.fr/ohmygibs/TinyLauncher.html
+
+On first run, you will need configure it and scan for your games in DH1:, or GAMES:
 
 # To Do / Roadmap
 
