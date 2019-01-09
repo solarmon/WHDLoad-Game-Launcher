@@ -5,9 +5,9 @@ A boot up solution for launching WHDLoad games for UAE based Amiga emulators
 Two release version files are provided:
 
 * .zip - this is the recommended **Directory** version. Unzip this and mount as a directory (DH0:) in UAE.
-* .hdf - this si the legacy HDF version
+* .hdf - this is the legacy HDF version
 
-Both version need to have the appropriate kickstart ROMs put in to the Dev/Kickstarts directory.
+Both version will need to have the appropriate kickstart ROMs put in to the **Dev/Kickstarts** directory.
 
 # Features
 
@@ -72,13 +72,13 @@ http://ohmygibs.free.fr/ohmygibs/TinyLauncher.html
 
 # To Do / Roadmap
 
-* ToolTypes support
+* Better ToolTypes support?
    - Need to support tooltyoes natively - via the .info icon file, and not via .tooltypes file?
    - Maybe use **kgiconload**?
    - Or method to extract the tooltypes values on the fly?
    - Some WHDLoad launchers support tooltypes - but need NewIcons support?
 * Better multiple game slave selector:
-   - ABS (Amiga Boot Selector)?
+   - Use ABS (Amiga Boot Selector)?
 * More Game Launchers?
   - X-bench
   - AGS
