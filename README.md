@@ -55,11 +55,11 @@ https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_
    - If a **.tooltypes** file is found for the slave file, the options found in this will be used to launch the game.
    - Some WHDLoad game launchers automatically generate the .tooltypes for each game slave it finds.
 
-# Mulltiple Slaves: Target Slave
+# Multiple Slaves: Target Slave
 
 There needs to be a method to specify directly which slave file you want to launch.
 
-The method I have used is what I call the **Target Slave** method, which is explained below.
+The method I have used is what I call the **Target Slave** method is to make use of the Volume name of DH1:, which is explained below.
 
 There are several hard drive formats supported by UAE:
 
@@ -70,13 +70,13 @@ There are several hard drive formats supported by UAE:
 
 The first two are generally the preferred/typical methods.
 
-However, when a **Hardfile** HDF file is used, the **volume name** is taken from insde the .hdf file and not the actual filename. When a HDF file is created (for example, usoing ADF Opus) you specify the volume name for it.
+However, when a **Hardfile** HDF file is used, the **volume name** is taken from insde the .hdf file and not the actual filename. When a HDF file is created (for example, using ADF Opus) you specify the volume name for it.
 
-When a **Directory** (or **Archive** or **Plain File**) is used, you **can** specify the volume name.
+When a **Directory** (or **Archive** or **Plain File**) is used, you can manually specify the volume name.
 
-Thus, if you have multiple game slave files in your WHDL game partition and want to specify the game slave version to launch, the WHDLoad game must be mounted as a **Directory** and the slave file name provided as the volume name. Otherwise, a selection dialogue will be used to ask the user to select a game slave file to launch.
+Thus, if you have multiple game slave files in your WHDL game partition and want to specify the game slave version to launch, the WHDLoad game must be mounted as a **Directory** and the slave file name (including the .slave extension) provided as the volume name. Otherwise, a selection dialogue will be used to ask the user to select a game slave file to launch.
 
-**It is also recommended that both the WHDLoad DH0: and Game/Games DH1 partition are mount as as a directories - it just allows making managing them much easier on the host emulation system.**
+**It is also recommended that both the WHDLoad DH0: and Games (collections) DH1: partition are mounted as as a directories - it just allows managing them much easier on the host emulation system, and you do not have to worry about the size of the .hdf file**
 
 # Miltiple Slaves: Slave Selector
 
