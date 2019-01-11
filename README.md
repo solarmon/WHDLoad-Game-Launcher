@@ -78,7 +78,7 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
 
 **It is also recommended that both the WHDLoad DH0: and Games (collections) DH1: partition are mounted as as a directories - it just allows managing them much easier on the host emulation system, and you do not have to worry about the size of the .hdf file**
 
-# Miltiple Slaves: Slave Selector
+# Multiple Slaves: Slave Selector
 
 If multiple slave files are detected and if the **Target Slave** method is not used, then a selector menu is provided.
 
