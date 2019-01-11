@@ -88,6 +88,14 @@ http://ohmygibs.free.fr/ohmygibs/Amiga_Boot_Selector.html
 
 You can use the joystick or keyboard to make the selection.
 
+The following options can be set by pressing the following keys:
+
+K - Change '**K**ickstart' theme
+B - Enable/Disable **B**oing **B**alls animation
+
+AGS will remember the last settings used (stored in S:AmigaBootSelector/Options.cfg)
+
+
 # Game Launcher
 
 If no slave files are detected on DH1: a Game Launcher will be launched.
@@ -96,7 +104,27 @@ Currently, the excellent **TinyLauncher** is included.
 
 http://ohmygibs.free.fr/ohmygibs/TinyLauncher.html
 
-On first run, you will need configure it and scan for your games in DH1:, or GAMES:
+On first run, you will need configure it and scan for your games in DH1:, or GAMES:.
+
+The following options can be set from the main screen by pressing the following keys:
+
+ESC - Exit
+F10 - Exit with return code 5
+R - Enable/disable **R**AD
+T - Enable/Disable **T**ool Types
+I - Enter **I**nfodesk
+F - Change **F**ont - Topaz or Speccy-Gibs
+H - Show **H**elp menu
+C - Enable/Disable displayt of game **C**overs / screenshots / images
+B - Boot HD / CD
+0-4 - Set **Jump To**:
+  - **0** = Disable/Enable Jump To
+  - **1** = Games
+  - **2** = Demos
+  - **3** = Mods
+  - **4** = Favourites
+
+When in a Jump To scree, use **0** to enable/disable Jump To. If disabled, you can use **ESC** to go back to the main screen.
 
 # To Do / Roadmap
 
