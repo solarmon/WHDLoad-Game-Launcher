@@ -90,8 +90,8 @@ You can use the joystick or keyboard to make the selection.
 
 The following options can be set by pressing the following keys:
 
-K - Change '**K**ickstart' theme
-B - Enable/Disable **B**oing **B**alls animation
+* K - Change '**K**ickstart' theme
+* B - Enable/Disable **B**oing **B**alls animation
 
 AGS will remember the last settings used (stored in S:AmigaBootSelector/Options.cfg)
 
@@ -108,16 +108,16 @@ On first run, you will need configure it and scan for your games in DH1:, or GAM
 
 The following options can be set from the main screen by pressing the following keys:
 
-ESC - Exit
-F10 - Exit with return code 5
-R - Enable/disable **R**AD
-T - Enable/Disable **T**ool Types
-I - Enter **I**nfodesk
-F - Change **F**ont - Topaz or Speccy-Gibs
-H - Show **H**elp menu
-C - Enable/Disable displayt of game **C**overs / screenshots / images
-B - Boot HD / CD
-0-4 - Set **Jump To**:
+* ESC - Exit
+* F10 - Exit with return code 5
+* R - Enable/disable **R**AD
+* T - Enable/Disable **T**ool Types
+* I - Enter **I**nfodesk
+* F - Change **F**ont - Topaz or Speccy-Gibs
+* H - Show **H**elp menu
+* C - Enable/Disable displayt of game **C**overs / screenshots / images
+* B - Boot HD / CD
+* 0-4 - Set **Jump To**:
   - **0** = Disable/Enable Jump To
   - **1** = Games
   - **2** = Demos
