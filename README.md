@@ -108,3 +108,4 @@ On first run, you will need configure it and scan for your games in DH1:, or GAM
 * More Game Launchers?
   - X-bench
   - AGS
+* Faster bootup, slave detection and menu generation.
