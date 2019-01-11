@@ -2,7 +2,7 @@
 
 # Latest release
 
-[v0.4-beta](https://github.com/solarmon/WHDLoad-Game-Launcher/releases/tag/v0.4-beta)
+[v0.5-beta](https://github.com/solarmon/WHDLoad-Game-Launcher/releases/tag/v0.5-beta)
 
 Older versions can be found in [Releases](https://github.com/solarmon/WHDLoad-Game-Launcher/releases).
 
@@ -22,30 +22,44 @@ Both version will need to have the appropriate kickstart ROMs put in to the **De
 * Locates the slave file automatically - no need to rename it to game.slave
 * Detects multiple WHDLoad game slave files
    * WHDLoad game slave file selected based the volume name of DH1:
-   * WHDLoad game slave file selection via a selection dialogue.
-   * Joystick is used to control the mouse for selection.
+   * WHDLoad game slave file selection via ABS (Amiga Boot Selector)
+   * Joystick or Keyboard used for selection
 * Single WHDLoad game slave file just gets launched normally.
 * When no WHDLoad game slave file detected
    * A game launcher is launched.
      - GAMES: is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
-* WHDload options from Tool Types support if a separately generated .tooltypes file is present.
+* WHDload options from Tool Types supported if a separately generated .tooltypes file is present.
 
 # Requirements and Setup
 
 * Kickstarts - you need to put your kickstarts (including rom.key for kickstarts provided by Cloanto Amiga Forever) in the Dev/Kickstarts directory
+  - See here for WHDLoad requirements: http://www.whdload.de/docs/en/need.html
   - To edit/manage the HDF file on Windows you can use ADF Opus (http://adfopus.sourceforge.net/)
   - See the the following guides for further details:
 https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/ http://lindqvist.synology.me/wordpress/?page_id=182
 
-* DH0: is the WHDLoad boot drive
-* DH1: is the game or games drive
-* For indivudal WHDLoad (in a directory, not in a .hdf file) games, the slave file(s) must be on the root of mounted directory (DH1:). Subdirectories are not supported.
-* For WHDLoad game collections mount on DH1: it is up to the game launcher scan for games, including subedirectories.
-* WHDLoad game slave file as DH1: volume name:
-   - DH1: must be mounted as a Directory, nor a Hardfile (HDF)
+* **DH0:** is the WHDLoad boot drive
+* **DH1:** is the game or games drive
+* For indivudal WHDLoad (in a directory, not in a .hdf file) games, the slave file(s) must be on the root of mounted directory (DH1:). **Slave files in subdirectories are not supported**.
+* Game Launcher: For WHDLoad game collections mounted on DH1: it is up to used the Game Launcher scan for games, which may include subdirectories support.
+* Target Slave: based on the Volume name of DH1:
+   - DH1: must be mounted as a **Directory**, nor a Hardfile (HDF)
 
-# WHDLoad Game Slave file as Volume Name
+# WHDLoad
+
+* At the moment, individual games are launched using WHDLoad and specifying the **PRELOAD** option.
+* QuitKey has been set to **$59** - i.e **F10**.
+  - Configurable in S/WHDLoad.prefs
+* Tooltypes:
+   - If a **.tooltypes** file is found for the slave file, the options found in this will be used to launch the game.
+   - Some WHDLoad game launchers automatically generate the .tooltypes for each game slave it finds.
+
+# Mulltiple Slaves: Target Slave
+
+There needs to be a method to specify directly which slave file you want to launch.
+
+The method I have used is what I call the **Target Slave** method, which is explained below.
 
 There are several hard drive formats supported by UAE:
 
@@ -64,16 +78,19 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
 
 **It is also recommended that both the WHDLoad DH0: and Game/Games DH1 partition are mount as as a directories - it just allows making managing them much easier on the host emulation system.**
 
-# WHDLoad
+# Miltiple Slaves: Game Slave Selector
 
-* At the moment, individual games are launched using WHDLoad and specifying the **PRELOAD** option.
-* QuitKey has been set to $59 - i.e F10.
-  - Configurable in S/WHDLoad.prefs
-* Tooltypes:
-   - If a **.tooltypes** file is found for the slave file, the options found in this will be used to launch the game.
-   - Some WHDLoad game launchers automatically generate the .tooltypes for each game slave it finds.
+If multiple slave files are detected and if the **Target Slave** method is not used, then a selector menu is provided.
+
+The selector menu used is the excellent **ABS** (**Amiga Boot Selector**)
+
+http://ohmygibs.free.fr/ohmygibs/Amiga_Boot_Selector.html
+
+You can use the joystick or keyboard to make the selection.
 
 # Game Launcher
+
+If no slave files are detected on DH1: a Game Launcher will be launched.
 
 Currently, the excellent **TinyLauncher** is included.
 
@@ -83,14 +100,11 @@ On first run, you will need configure it and scan for your games in DH1:, or GAM
 
 # To Do / Roadmap
 
-* Native joystick support? At the moment the solution is to use the joystick to control the mouse.
 * Better ToolTypes support?
    - Need to support tooltyoes natively - via the .info icon file, and not via .tooltypes file?
    - Maybe use **kgiconload**?
    - Or method to extract the tooltypes values on the fly?
    - Some WHDLoad launchers support tooltypes - but need NewIcons support?
-* Better multiple game slave selector:
-   - Use ABS (Amiga Boot Selector)?
 * More Game Launchers?
   - X-bench
   - AGS
