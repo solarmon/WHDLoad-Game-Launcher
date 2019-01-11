@@ -20,10 +20,10 @@ Both version will need to have the appropriate kickstart ROMs put in to the **De
 # Features
 
 * Locates the slave file automatically - no need to rename it to game.slave
-* Detects multiple WHDLoad game slave files
-   * WHDLoad game slave file selected based the volume name of DH1:
-   * WHDLoad game slave file selection via ABS (Amiga Boot Selector)
-   * Joystick or Keyboard used for selection
+* Supports multiple WHDLoad game slave files
+   * Target Slave: The WHDLoad game slave file selected based the Volume name of DH1:
+   * Slave Selector: WHDLoad game slave files selection via ABS (Amiga Boot Selector)
+      * Joystick or Keyboard used for selection
 * Single WHDLoad game slave file just gets launched normally.
 * When no WHDLoad game slave file detected
    * A game launcher is launched.
@@ -78,7 +78,7 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
 
 **It is also recommended that both the WHDLoad DH0: and Game/Games DH1 partition are mount as as a directories - it just allows making managing them much easier on the host emulation system.**
 
-# Miltiple Slaves: Game Slave Selector
+# Miltiple Slaves: Slave Selector
 
 If multiple slave files are detected and if the **Target Slave** method is not used, then a selector menu is provided.
 
