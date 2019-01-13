@@ -52,9 +52,9 @@ https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_
 * At the moment, individual games are launched using WHDLoad and specifying the **PRELOAD** option.
 * QuitKey has been set to **$59** - i.e **F10**.
   - Configurable in S/WHDLoad.prefs
-* Tooltypes:
-   - If a **.tooltypes** file is found for the slave file, the options found in this will be used to launch the game.
-   - Some WHDLoad game launchers automatically generate the .tooltypes for each game slave it finds.
+* ToolTypes:
+   - WHDLoad options specified as ToolTypes are recognised and used to load the game.
+   - The found WHDLoad options are saved to a .tooltypes file for later/easier use. 
 
 # Multiple Slaves: Target Slave
 
