@@ -8,6 +8,10 @@ Older versions can be found in [Releases](https://github.com/solarmon/WHDLoad-Ga
 
 # Summary
 
+
+![Summary Diagram](https://github.com/solarmon/WHDLoad-Game-Launcher/blob/master/WHDLoad-Game-Launcher.PNG)
+      
+
 WHDLoad Game Launcher is a startup-sequence solution for launching WHDLoad games on UAE based Amiga emulators
 
 Two release version files are provided:
