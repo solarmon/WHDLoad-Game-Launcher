@@ -133,5 +133,7 @@ When in a Jump To scree, use **0** to enable/disable Jump To. If disabled, you c
 * More Game Launchers?
   - X-bench
   - AGS
-* Faster bootup, slave detection and menu generation.
+* Faster bootup, slave detection/processing and menu generation.
 * Smaller footprint - remove unused commands and libraries.
+* User customisation options:
+  - via left/right click on bootup?
