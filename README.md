@@ -2,7 +2,7 @@
 
 # Latest release
 
-[v0.5-beta](https://github.com/solarmon/WHDLoad-Game-Launcher/releases/tag/v0.5-beta)
+[v0.6-beta](https://github.com/solarmon/WHDLoad-Game-Launcher/releases/tag/v0.6-beta)
 
 Older versions can be found in [Releases](https://github.com/solarmon/WHDLoad-Game-Launcher/releases).
 
@@ -19,8 +19,8 @@ Both version will need to have the appropriate kickstart ROMs put in to the **De
 
 # Features
 
-* Locates the slave file automatically - no need to rename it to game.slave
-* Supports multiple WHDLoad game slave files
+* Locates the .slave file automatically - **no need to rename it to game.slave**
+* Supports multiple WHDLoad game slave files. Methods supported:
    * Target Slave: The WHDLoad game slave file selected based the Volume name of DH1:
    * Slave Selector: WHDLoad game slave files selection via ABS (Amiga Boot Selector)
       * Joystick or Keyboard used for selection
@@ -29,7 +29,8 @@ Both version will need to have the appropriate kickstart ROMs put in to the **De
    * A game launcher is launched.
      - GAMES: is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
-* WHDload options from Tool Types supported if a separately generated .tooltypes file is present.
+* WHDload options from ToolTypes in the game .info file.
+  - This is saved to a .tooltypes file for each game.
 
 # Requirements and Setup
 
@@ -39,8 +40,8 @@ Both version will need to have the appropriate kickstart ROMs put in to the **De
   - See the the following guides for further details:
 https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/ http://lindqvist.synology.me/wordpress/?page_id=182
 
-* **DH0:** is the WHDLoad boot drive
-* **DH1:** is the game or games drive
+* **DH0:** is the WHDLoad boot drive. Must be writeable.
+* **DH1:** is the game or games drive. Must be writeable.
 * For indivudal WHDLoad (in a directory, not in a .hdf file) games, the slave file(s) must be on the root of mounted directory (DH1:). **Slave files in subdirectories are not supported**.
 * Game Launcher: For WHDLoad game collections mounted on DH1: it is up to used the Game Launcher scan for games, which may include subdirectories support.
 * Target Slave: based on the Volume name of DH1:
@@ -128,12 +129,9 @@ When in a Jump To scree, use **0** to enable/disable Jump To. If disabled, you c
 
 # To Do / Roadmap
 
-* Better ToolTypes support?
-   - Need to support tooltyoes natively - via the .info icon file, and not via .tooltypes file?
-   - Maybe use **kgiconload**?
-   - Or method to extract the tooltypes values on the fly?
-   - Some WHDLoad launchers support tooltypes - but need NewIcons support?
+* WHDload splash screen
 * More Game Launchers?
   - X-bench
   - AGS
 * Faster bootup, slave detection and menu generation.
+* Smaller footprint - remove unused commands and libraries.
