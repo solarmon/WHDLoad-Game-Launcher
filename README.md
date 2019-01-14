@@ -16,25 +16,28 @@ WHDLoad Game Launcher is a startup-sequence solution for launching WHDLoad games
 
 Two release version files are provided:
 
-* .zip - this is the recommended **Directory** version. Unzip this and mount as a directory (DH0:) in UAE.
-* .hdf - this is the legacy HDF version
+* .zip - this is the recommended directory version. Unzip this and mount as a **Directory** (DH0:) in UAE.
+* .hdf - this is the legacy HDF version. Mount as a **Hardfile** (DH0:) in UAE.
 
 Both version will need to have the appropriate kickstart ROMs put in to the **Dev/Kickstarts** directory.
 
 # Features
 
 * Locates the .slave file automatically - **no need to rename it to game.slave**
-* Supports multiple WHDLoad game slave files. Methods supported:
-   * Target Slave: The WHDLoad game slave file selected based the Volume name of DH1:
-   * Slave Selector: WHDLoad game slave files selection via ABS (Amiga Boot Selector)
+
+* **Single Slave mode**: Sinlge WHDLoad game slave file gets launched automatically.
+
+* Supports **multiple** WHDLoad game slave files. Methods supported:
+   * **Target Slave mode**: The WHDLoad game slave file selected based the Volume name of DH1:
+   * **Select Slave mode**: WHDLoad game slave files selection using ABS (Amiga Boot Selector)
       * Joystick or Keyboard used for selection
-* Single WHDLoad game slave file just gets launched normally.
-* When no WHDLoad game slave file detected
-   * A game launcher is launched.
+* Games are launched with WHDload options from ToolTypes in the game .info file.
+  - This is also saved to a .tooltypes file for each game.
+  
+* **Game Launcher mode**: when no WHDLoad game slave file detected a Game Launcher is launched.
      - GAMES: is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
-* WHDload options from ToolTypes in the game .info file.
-  - This is saved to a .tooltypes file for each game.
+* 
 
 # Requirements and Setup
 
@@ -44,27 +47,24 @@ Both version will need to have the appropriate kickstart ROMs put in to the **De
   - See the the following guides for further details:
 https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/ http://lindqvist.synology.me/wordpress/?page_id=182
 
+Or the WHDLoad Requirements page:
+
+http://www.whdload.de/docs/en/need.html
+
+**Note:** Cloanto kickstarts also need the rom.key copied to the same directory.
+
 * **DH0:** is the WHDLoad boot drive. Must be writeable.
 * **DH1:** is the game or games drive. Must be writeable.
-* For indivudal WHDLoad (in a directory, not in a .hdf file) games, the slave file(s) must be on the root of mounted directory (DH1:). **Slave files in subdirectories are not supported**.
+* **Target Slave** and **Select Slave** - the slave file(s) must be on the root of mounted directory (DH1:). **Slave files in subdirectories are not supported**.
 * Game Launcher: For WHDLoad game collections mounted on DH1: it is up to used the Game Launcher scan for games, which may include subdirectories support.
 * Target Slave: based on the Volume name of DH1:
    - DH1: must be mounted as a **Directory**, nor a Hardfile (HDF)
 
-# WHDLoad
-
-* At the moment, individual games are launched using WHDLoad and specifying the **PRELOAD** option.
-* QuitKey has been set to **$59** - i.e **F10**.
-  - Configurable in S/WHDLoad.prefs
-* ToolTypes:
-   - WHDLoad options specified as ToolTypes are recognised and used to load the game.
-   - The found WHDLoad options are saved to a .tooltypes file for later/easier use. 
-
-# Multiple Slaves: Target Slave
+# Target Slave mode
 
 There needs to be a method to specify directly which slave file you want to launch.
 
-The method I have used is what I call the **Target Slave** method is to make use of the Volume name of DH1:, which is explained below.
+The method used is what is called the **Target Slave** method. This method makes use of the **Volume** name of DH1:. This is explained further below.
 
 There are several hard drive formats supported by UAE:
 
@@ -83,11 +83,11 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
 
 **It is also recommended that both the WHDLoad DH0: and Games (collections) DH1: partition are mounted as as a directories - it just allows managing them much easier on the host emulation system, and you do not have to worry about the size of the .hdf file**
 
-# Multiple Slaves: Slave Selector
+# Select Slave mode
 
-If multiple slave files are detected and if the **Target Slave** method is not used, then a selector menu is provided.
+If multiple slave files are detected, and if **Target Slave** method is not used, then a selection method is used.
 
-The selector menu used is the excellent **ABS** (**Amiga Boot Selector**)
+The selector method used is the excellent **ABS** (**Amiga Boot Selector**)
 
 http://ohmygibs.free.fr/ohmygibs/Amiga_Boot_Selector.html
 
@@ -100,8 +100,9 @@ The following options can be set by pressing the following keys:
 
 AGS will remember the last settings used (stored in S:AmigaBootSelector/Options.cfg)
 
+Up to a maximum of 12 game slave files are supported using ABS.
 
-# Game Launcher
+# Game Launcher mode
 
 If no slave files are detected on DH1: a Game Launcher will be launched.
 
@@ -129,8 +130,17 @@ The following options can be set from the main screen by pressing the following 
   - **3** = Mods
   - **4** = Favourites
 
-When in a Jump To scree, use **0** to enable/disable Jump To. If disabled, you can use **ESC** to go back to the main screen.
+When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, you can use **ESC** to go back to the main screen.
 
+# WHDLoad
+
+* At the moment, individual games are launched using WHDLoad and specifying the **PRELOAD** option.
+* QuitKey has been set to **$59** - i.e **F10**.
+  - Configurable in S/WHDLoad.prefs
+* ToolTypes:
+   - WHDLoad options specified as ToolTypes are recognised and used to load the game.
+   - The found WHDLoad options are saved to a .tooltypes file for later/easier use. 
+   
 # To Do / Roadmap
 
 * WHDload splash screen
