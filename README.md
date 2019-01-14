@@ -12,9 +12,9 @@ WHDLoad Game Launcher is a startup-sequence solution for launching WHDLoad games
 
 It supports three modes of operation:
 
-* Target Slave - to target a specific slave file.
-* Select Slave - to select from multiple slave files.
-* Game Launcher - to use a Game Launcher for your games repository.
+* Slave Target - to target a specific slave file.
+* Slave Selection - to select from multiple slave files.
+* Slave Collection - to use a Game Launcher for your games collection.
 
 As summary of the setup can be seen below:
 
@@ -32,20 +32,22 @@ Two release versions are provided:
 * **Single Slave mode**: Sinlge WHDLoad game slave file gets launched automatically.
 
 * Supports **multiple** WHDLoad game slave files. Methods supported:
-   * **Target Slave mode**: The WHDLoad game slave file selected based the Volume name of DH1:
-   * **Select Slave mode**: WHDLoad game slave files selection using ABS (Amiga Boot Selector)
+   * **Slave Target mode**: The WHDLoad game slave file selected based the Volume name of DH1:
+   * **Slave Selection mode**: WHDLoad game slave files selection using ABS (Amiga Boot Selector)
       * Joystick or Keyboard used for selection
 * Games are launched with WHDload options from ToolTypes in the game .info file.
   - This is also saved to a .tooltypes file for each game.
   
-* **Game Launcher mode**: when no WHDLoad game slave file detected a Game Launcher is launched.
+* **Slave Collection mode**: when no WHDLoad game slave file detected a Game Launcher is launched.
      - GAMES: is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
 * 
 
 # Requirements and Setup
 
-* Kickstarts - you need to put your kickstarts (including rom.key for kickstarts provided by Cloanto Amiga Forever) in the Dev/Kickstarts directory
+See the diagram above for reference.
+
+* Kickstarts - you need to put your kickstarts (including rom.key for kickstarts provided by Cloanto Amiga Forever) in the **System:Dev/Kickstarts** directory
   - See here for WHDLoad requirements: http://www.whdload.de/docs/en/need.html
   - To edit/manage the HDF file on Windows you can use ADF Opus (http://adfopus.sourceforge.net/)
   - See the the following guides for further details:
@@ -59,16 +61,16 @@ http://www.whdload.de/docs/en/need.html
 
 * **DH0:** is the WHDLoad boot drive. Must be writeable.
 * **DH1:** is the game or games drive. Must be writeable.
-* **Target Slave** and **Select Slave** - the slave file(s) must be on the root of mounted directory (DH1:). **Slave files in subdirectories are not supported**.
-* Game Launcher: For WHDLoad game collections mounted on DH1: it is up to used the Game Launcher scan for games, which may include subdirectories support.
-* Target Slave: based on the Volume name of DH1:
+* For **Slave Target** and **Slave Selection** modes - the slave file(s) must be on the root of mounted directory (DH1:). **Slave files in subdirectories are not supported**.
+* Slave Collection mode: The game collection must be mounted on DH1: it is up to the Game Launcher to scan for games, which may include subdirectories support.
+* Slave Target mode: based on the Volume name of DH1:
    - DH1: must be mounted as a **Directory**, nor a Hardfile (HDF)
 
-# Target Slave mode
+# Slave Target mode
 
 There needs to be a method to specify directly which slave file you want to launch.
 
-The method used is what is called the **Target Slave** method. This method makes use of the **Volume** name of DH1:. This is explained further below.
+The method used is what is called the **Slave Target** method. This method makes use of the **Volume** name of DH1:. This is explained further below.
 
 There are several hard drive formats supported by UAE:
 
@@ -87,9 +89,9 @@ Thus, if you have multiple game slave files in your WHDL game partition and want
 
 **It is also recommended that both the WHDLoad DH0: and Games (collections) DH1: partition are mounted as as a directories - it just allows managing them much easier on the host emulation system, and you do not have to worry about the size of the .hdf file**
 
-# Select Slave mode
+# Slave Selection mode
 
-If multiple slave files are detected, and if **Target Slave** method is not used, then a selection method is used.
+If multiple slave files are detected, and if **Slave Target** method is not used, then a selection method is used.
 
 The selector method used is the excellent **ABS** (**Amiga Boot Selector**)
 
@@ -106,7 +108,7 @@ AGS will remember the last settings used (stored in S:AmigaBootSelector/Options.
 
 Up to a maximum of 12 game slave files are supported using ABS.
 
-# Game Launcher mode
+# Slave Collection mode
 
 If no slave files are detected on DH1: a Game Launcher will be launched.
 
