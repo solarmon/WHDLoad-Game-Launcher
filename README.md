@@ -2,7 +2,7 @@
 
 # Latest release
 
-[v0.6-beta](https://github.com/solarmon/WHDLoad-Game-Launcher/releases/tag/v0.6-beta)
+[v0.6.1-beta](https://github.com/solarmon/WHDLoad-Game-Launcher/releases/tag/v0.6.1-beta)
 
 Older versions can be found in [Releases](https://github.com/solarmon/WHDLoad-Game-Launcher/releases).
 
