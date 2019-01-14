@@ -8,18 +8,22 @@ Older versions can be found in [Releases](https://github.com/solarmon/WHDLoad-Ga
 
 # Summary
 
+WHDLoad Game Launcher is a startup-sequence solution for launching WHDLoad games on UAE based Amiga emulators
+
+It supports three modes of operation:
+
+* Target Slave - to target a specific slave file.
+* Select Slave - to select from multiple slave files.
+* Game Launcher - to use a Game Launcher for your games repository.
+
+As summary of the setup can be seen below:
 
 ![Summary Diagram](https://github.com/solarmon/WHDLoad-Game-Launcher/blob/master/WHDLoad-Game-Launcher.PNG)
       
-
-WHDLoad Game Launcher is a startup-sequence solution for launching WHDLoad games on UAE based Amiga emulators
-
-Two release version files are provided:
+Two release versions are provided:
 
 * .zip - this is the recommended directory version. Unzip this and mount as a **Directory** (DH0:) in UAE.
 * .hdf - this is the legacy HDF version. Mount as a **Hardfile** (DH0:) in UAE.
-
-Both version will need to have the appropriate kickstart ROMs put in to the **Dev/Kickstarts** directory.
 
 # Features
 
