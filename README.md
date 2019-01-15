@@ -43,28 +43,44 @@ Two release versions are provided:
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
 * 
 
-# Requirements and Setup
+# Requirements
 
 See the diagram above for reference.
 
-* Kickstarts - you need to put your kickstarts (including rom.key for kickstarts provided by Cloanto Amiga Forever) in the **System:Dev/Kickstarts** directory
+* WinUAE emulator
+* Kickstarts:
+  - For boot up: Kickstart 3.1
+  - For WHDLoad: various - game dependent
+  - rom.key if you are using Cloanto Kickstarts.
   - See here for WHDLoad requirements: http://www.whdload.de/docs/en/need.html
-  - To edit/manage the HDF file on Windows you can use ADF Opus (http://adfopus.sourceforge.net/)
+
+* To edit/manage the HDF file on Windows you can use ADF Opus (http://adfopus.sourceforge.net/)
   - See the the following guides for further details:
 https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/ http://lindqvist.synology.me/wordpress/?page_id=182
 
-Or the WHDLoad Requirements page:
+  - Or the WHDLoad Requirements page:
 
 http://www.whdload.de/docs/en/need.html
 
-**Note:** Cloanto kickstarts also need the rom.key copied to the same directory.
+# Setup
+
+See the diagram above for reference.
 
 * **DH0:** is the WHDLoad boot drive. Must be writeable.
+  - You need to put your kickstarts (including rom.key for Cloanto Amiga Forever kickstarts) in the **System:Dev/Kickstarts** directory
+
 * **DH1:** is the game or games drive. Must be writeable.
-* For **Slave Target** and **Slave Selection** modes - the slave file(s) must be on the root of mounted directory (DH1:). **Slave files in subdirectories are not supported**.
-* Slave Collection mode: The game collection must be mounted on DH1: it is up to the Game Launcher to scan for games, which may include subdirectories support.
-* Slave Target mode: based on the Volume name of DH1:
-   - DH1: must be mounted as a **Directory**, nor a Hardfile (HDF)
+  - **Slave Target** mode:
+    - DH1: must be mounted as a **Directory** and the Volume name set to target slave file name.
+    - Slave file) must be in the root of DH1:
+     - **Slave files in subdirectories are not supported**.
+  - **Slave Selection** mode:
+    - DH1: can be mounted as a Directory or HDF
+    - Slave files must be in the root of DH1:
+    - **Slave files in subdirectories are not supported**.
+  - **Slave Collection** mode:
+    - The game collection must be mounted on DH1: it is up to the Game Launcher to scan for games, which may include subdirectories support.
+
 
 # Slave Target mode
 
