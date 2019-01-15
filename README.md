@@ -56,11 +56,11 @@ See the diagram above for reference.
 
 * To edit/manage the HDF file on Windows you can use ADF Opus (http://adfopus.sourceforge.net/)
   - See the the following guides for further details:
-https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/ http://lindqvist.synology.me/wordpress/?page_id=182
+  https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/
+  http://lindqvist.synology.me/wordpress/?page_id=182
 
   - Or the WHDLoad Requirements page:
-
-http://www.whdload.de/docs/en/need.html
+  http://www.whdload.de/docs/en/need.html
 
 # Setup
 
