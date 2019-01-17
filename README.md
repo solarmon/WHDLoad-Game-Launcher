@@ -167,8 +167,9 @@ When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, 
 
 * WHDload splash screen
 * More Game Launchers?
-  - X-bench
-  - AGS
+  - X-bEnCh (http://www.jimneray.com/xbench.html)(http://eab.abime.net/showthread.php?t=65633)
+  - AGS2 (https://github.com/MagerValp/ArcadeGameSelector)(http://eab.abime.net/showthread.php?t=68818)
+  - KGLoad (http://eab.abime.net/showthread.php?t=66086)
 * Faster bootup, slave detection/processing and menu generation.
 * Smaller footprint - remove unused commands and libraries.
 * User customisation options:
