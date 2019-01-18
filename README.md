@@ -2,7 +2,7 @@
 
 # Latest release
 
-[v0.6.1-beta](https://github.com/solarmon/WHDLoad-Game-Launcher/releases/tag/v0.6.1-beta)
+[v0.7-beta](https://github.com/solarmon/WHDLoad-Game-Launcher/releases/tag/v0.7-beta)
 
 Older versions can be found in [Releases](https://github.com/solarmon/WHDLoad-Game-Launcher/releases).
 
@@ -28,12 +28,13 @@ Two release versions are provided:
 # Features
 
 * Locates the .slave file automatically - **no need to rename it to game.slave**
+  - If a game.slave file is detected and warning given.
 
 * **Single Slave mode**: Sinlge WHDLoad game slave file gets launched automatically.
 
 * Supports **multiple** WHDLoad game slave files. Methods supported:
-   * **Slave Target mode**: The WHDLoad game slave file selected based the Volume name of DH1:
-   * **Slave Selection mode**: WHDLoad game slave files selection using ABS (Amiga Boot Selector)
+   - **Slave Target mode**: The WHDLoad game slave file selected based the Volume name of DH1:
+   - **Slave Selection mode**: WHDLoad game slave files selection using ABS (Amiga Boot Selector)
       * Joystick or Keyboard used for selection
 * Games are launched with WHDload options from ToolTypes in the game .info file.
   - This is also saved to a .tooltypes file for each game.
@@ -41,7 +42,9 @@ Two release versions are provided:
 * **Slave Collection mode**: when no WHDLoad game slave file detected a Game Launcher is launched.
      - GAMES: is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
-* 
+* **Workbench** mode: A minimal Workbench is loaded at the end.
+  - Multiview can be used to view readme, guides, solutions, etc documents.
+  - Files and directories can be managed and renamed - i.e. rename the game.slave file.
 
 # Requirements
 
@@ -162,7 +165,9 @@ When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, 
 * ToolTypes:
    - WHDLoad options specified as ToolTypes are recognised and used to load the game.
    - The found WHDLoad options are saved to a .tooltypes file for later/easier use. 
-   
+
+
+
 # To Do / Roadmap
 
 * WHDload splash screen
@@ -174,3 +179,21 @@ When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, 
 * Smaller footprint - remove unused commands and libraries.
 * User customisation options:
   - via left/right click on bootup?
+  
+  # Credits and links
+
+* The excellent WHDLoad boot setup guides at:
+  - https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/
+  - http://lindqvist.synology.me/wordpress/?page_id=182
+ * The WHDLoad team:
+   - http://whdload.de/
+ * Michael Gibs for his TinyLauncher and ABS programs:
+   - http://ohmygibs.free.fr/ohmygibs/TinyLauncher.html
+   - http://ohmygibs.free.fr/ohmygibs/Amiga_Boot_Selector.html
+ * Additional programs, tools and libraries used:
+   - rexxtricks.library - http://aminet.net/package/util/rexx/RexxTricks_386
+   - GetVolumeName - http://aminet.net/package/util/cli/GetVolumeName
+   - JoyMouse - http://aminet.net/package/util/mouse/JoyMouse
+   - kgiconload - http://eab.abime.net/showpost.php?p=584390&postcount=72
+   - WBRun - http://aminet.net/package/util/cli/WBRun
+   - bblank - http://aminet.net/package/util/boot/BBlank
