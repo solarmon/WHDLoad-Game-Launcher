@@ -182,6 +182,8 @@ When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, 
   
   # Credits and links
 
+* WHDLoad Game Launcher was developed and tested in WinUAE.
+  - http://www.winuae.net/
 * The excellent WHDLoad boot setup guides at:
   - https://www.reddit.com/r/miniSNESmods/comments/8dbqv7/guide_playing_amiga_games_on_the_snes_classic/
   - http://lindqvist.synology.me/wordpress/?page_id=182
@@ -190,6 +192,8 @@ When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, 
  * Michael Gibs for his TinyLauncher and ABS programs:
    - http://ohmygibs.free.fr/ohmygibs/TinyLauncher.html
    - http://ohmygibs.free.fr/ohmygibs/Amiga_Boot_Selector.html
+ * ADF Opus - for creating .hdf files
+   - http://adfopus.sourceforge.net/
  * Additional programs, tools and libraries used:
    - rexxtricks.library - http://aminet.net/package/util/rexx/RexxTricks_386
    - GetVolumeName - http://aminet.net/package/util/cli/GetVolumeName
