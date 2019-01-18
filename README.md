@@ -51,6 +51,7 @@ Two release versions are provided:
 See the diagram above for reference.
 
 * WinUAE emulator
+  - but other UAE based emulators may work!
 * Kickstarts:
   - For boot up: Kickstart 3.1
   - For WHDLoad: various - game dependent
@@ -68,6 +69,10 @@ See the diagram above for reference.
  * WHDLoad Game
    - Get them from https://www.whdownload.com/
    - The game name for the **.info** and **.slave** files **MUST match exactly**.
+   - UAE mount formats:
+     - Directory
+     - .hdf
+     - .lha / .zip (READ ONLY - Games cannot be saved directly to it) (Tested on WinUAE)
 
 # Setup
 
@@ -170,19 +175,19 @@ When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, 
    - WHDLoad options specified as ToolTypes are recognised and used to load the game.
    - The found WHDLoad options are saved to a .tooltypes file for later/easier use. 
 
-
-
 # To Do / Roadmap
 
-* WHDload splash screen
+* .lha / .zip detection support
+  - Use WHDLoad SavePath option?
 * More Game Launchers?
   - X-bEnCh (http://www.jimneray.com/xbench.html)(http://eab.abime.net/showthread.php?t=65633)
   - AGS2 (https://github.com/MagerValp/ArcadeGameSelector)(http://eab.abime.net/showthread.php?t=68818)
   - KGLoad (http://eab.abime.net/showthread.php?t=66086)
 * Faster bootup, slave detection/processing and menu generation.
-* Smaller footprint - remove unused commands and libraries.
+* Smaller footprint - remove unused resources.
 * User customisation options:
-  - via left/right click on bootup?
+  - via left/right mouse button on bootup?
+  - Joystick input?
   
   # Credits and links
 
