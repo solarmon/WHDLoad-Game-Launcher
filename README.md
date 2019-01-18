@@ -64,6 +64,10 @@ See the diagram above for reference.
 
   - Or the WHDLoad Requirements page:
   http://www.whdload.de/docs/en/need.html
+ 
+ * WHDLoad Game
+   - Get them from https://www.whdownload.com/
+   - The game name for the **.info** and **.slave** files **MUST match exactly**.
 
 # Setup
 
