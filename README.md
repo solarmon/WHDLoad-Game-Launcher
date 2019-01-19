@@ -17,7 +17,7 @@ It supports three modes of operation:
 * Slave Collection - to use a Game Launcher for your games collection.
 
 As summary of the setup can be seen below:
-
+(NEEDS UPDATING!!)
 ![Summary Diagram](https://github.com/solarmon/WHDLoad-Game-Launcher/blob/master/WHDLoad-Game-Launcher.PNG)
       
 Two release versions are provided:
@@ -92,6 +92,14 @@ See the diagram above for reference.
     - **Slave files in subdirectories are not supported**.
   - **Slave Collection** mode:
     - The game collection must be mounted on DH1: it is up to the Game Launcher to scan for games, which may include subdirectories support.
+  - For .lha / .zip files mounted on DH1:
+    - DH1: becomes READONLY
+    - The Volume name must be in the following format:
+      \<GameDirName\>.\<ext\>
+      Where <GameDirName> is the game subdirectory in the .lha or .zip file.
+      Where <ext> is the compression extension - either .lha or .zip
+    - The Volume name, including the extension cannot exceed 30 characters.
+    - WHDLoad option **SavePath=SYS:WHDSaves** is added to allow save games to **DH0:WHDSaves**
 
 
 # Slave Target mode
