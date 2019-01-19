@@ -17,9 +17,11 @@ It supports three modes of operation:
 * Slave Collection - to use a Game Launcher for your games collection.
 
 As summary of the setup can be seen below:
-(NEEDS UPDATING!!)
+
+
 ![Summary Diagram](https://github.com/solarmon/WHDLoad-Game-Launcher/blob/master/WHDLoad-Game-Launcher.PNG)
-      
+
+
 Two release versions are provided:
 
 * .zip - this is the recommended directory version. Unzip this and mount as a **Directory** (DH0:) in UAE.
