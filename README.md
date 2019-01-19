@@ -34,6 +34,7 @@ Two release versions are provided:
 
 * Supports **multiple** WHDLoad game slave files. Methods supported:
    - **Slave Target mode**: The WHDLoad game slave file selected based the Volume name of DH1:
+     - This mode is not supported when DH1: is mounted with a .lha or .zip WHDLoad game file.
    - **Slave Selection mode**: WHDLoad game slave files selection using ABS (Amiga Boot Selector)
       * Joystick or Keyboard used for selection
 * Games are launched with WHDload options from ToolTypes in the game .info file.
@@ -69,10 +70,14 @@ See the diagram above for reference.
  * WHDLoad Game
    - Get them from https://www.whdownload.com/
    - The game name for the **.info** and **.slave** files **MUST match exactly**.
-   - UAE mount formats:
+   - UAE drive mount formats:
      - Directory
      - .hdf
-     - .lha / .zip (READ ONLY - Games cannot be saved directly to it) (Tested on WinUAE)
+     - .lha / .zip
+       - DH1: drive is READ ONLY
+       - Games saves cannot written
+       - SavePath WHDLoad option enabled to allow games saves to DH0:WHDSaves
+       - (Tested on WinUAE)
 
 # Setup
 
