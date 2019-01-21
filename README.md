@@ -16,7 +16,7 @@ It supports three modes of operation:
 * Slave Selection - to select from multiple slave files.
 * Slave Collection - to use a Game Launcher for your games collection.
 
-As summary of the setup can be seen below:
+As summary of the setup and options can be seen below:
 
 
 ![Summary Diagram](https://github.com/solarmon/WHDLoad-Game-Launcher/blob/master/WHDLoad-Game-Launcher.PNG)
