@@ -77,7 +77,7 @@ See the diagram above for reference.
      - .hdf
      - .lha / .zip
        - DH1: drive is READ ONLY
-       - Games saves cannot written
+       - Games saves cannot be written to DH1:
        - SavePath WHDLoad option enabled to allow games saves to DH0:WHDSaves
        - (Tested on WinUAE)
 
