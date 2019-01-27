@@ -39,12 +39,13 @@ Two release versions are provided:
      - This mode is not supported when DH1: is mounted with a .lha or .zip WHDLoad game file.
    - **Slave Selection mode**: WHDLoad game slave files selection using ABS (Amiga Boot Selector)
       * Joystick or Keyboard used for selection
+
 * Games are launched with WHDload options from ToolTypes in the game .info file.
-  - This is also saved to a .tooltypes file for each game.
   
 * **Slave Collection mode**: when no WHDLoad game slave file detected a Game Launcher is launched.
      - GAMES: is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
+
 * **Workbench** mode: A minimal Workbench is loaded at the end.
   - Multiview can be used to view readme, guides, solutions, etc documents.
   - Files and directories can be managed and renamed - i.e. rename the game.slave file.
