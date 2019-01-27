@@ -185,17 +185,13 @@ When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, 
 
 # WHDLoad
 
-* At the moment, individual games are launched using WHDLoad and specifying the **PRELOAD** option.
 * QuitKey has been set to **$59** - i.e **F10**.
   - Configurable in S/WHDLoad.prefs
 * ToolTypes:
    - WHDLoad options specified as ToolTypes are recognised and used to load the game.
-   - The found WHDLoad options are saved to a .tooltypes file for later/easier use. 
 
 # To Do / Roadmap
 
-* .lha / .zip detection support
-  - Use WHDLoad SavePath option?
 * More Game Launchers?
   - X-bEnCh (http://www.jimneray.com/xbench.html)(http://eab.abime.net/showthread.php?t=65633)
   - AGS2 (https://github.com/MagerValp/ArcadeGameSelector)(http://eab.abime.net/showthread.php?t=68818)
