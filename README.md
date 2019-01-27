@@ -30,23 +30,23 @@ Two release versions are provided:
 # Features
 
 * Locates the .slave file automatically - **no need to rename it to game.slave**
-  - If a game.slave file is detected and warning given.
+  - If a game.slave file is detected a warning is displayed.
 
 * **Single Slave mode**: Sinlge WHDLoad game slave file gets launched automatically.
 
 * Supports **multiple** WHDLoad game slave files. Methods supported:
    - **Slave Target mode**: The WHDLoad game slave file selected based the Volume name of DH1:
-     - This mode is not supported when DH1: is mounted with a .lha or .zip WHDLoad game file.
-   - **Slave Selection mode**: WHDLoad game slave files selection using ABS (Amiga Boot Selector)
-      * Joystick or Keyboard used for selection
+     - This mode is **not** supported when DH1: is mounted with a **.lha** or **.zip** WHDLoad game file.
+   - **Slave Selection mode**: WHDLoad game slave files selection using **ABS** (Amiga Boot Selector)
+      * **Joystick** or **Keyboard** used for selection
 
-* Games are launched with WHDload options from ToolTypes in the game .info file.
+* Games are launched with WHDload options from **ToolTypes** in the game **.info** file.
   
 * **Slave Collection mode**: when no WHDLoad game slave file detected a Game Launcher is launched.
-     - GAMES: is assigned to DH1: (if not already assigned).
+     - **GAMES:** is assigned to DH1: (if not already assigned).
      - The game launcher can be configured to point to DH1: or GAMES: as the games repository.
 
-* **Workbench** mode: A minimal Workbench is loaded at the end.
+* **Workbench mode**: A minimal Workbench is loaded at the end, after game exit (use F10).
   - Multiview can be used to view readme, guides, solutions, etc documents.
   - Files and directories can be managed and renamed - i.e. rename the game.slave file.
 
@@ -56,6 +56,7 @@ See the diagram above for reference.
 
 * WinUAE emulator
   - but other UAE based emulators may work!
+  
 * Kickstarts:
   - For boot up: Kickstart 3.1
   - For WHDLoad: various - game dependent
@@ -125,13 +126,13 @@ There are several hard drive formats supported by UAE:
 
 The first two are generally the preferred/typical methods.
 
-However, when a **Hardfile** HDF file is used, the **volume name** is taken from insde the .hdf file and not the actual filename. When a HDF file is created (for example, using ADF Opus) you specify the volume name for it.
+However, when a **Hardfile** HDF file is used, the **volume name** is taken from inside the .hdf file and not the actual filename. When a HDF file is created (for example, using ADF Opus) you specify the volume name for it.
 
 When a **Directory** (or **Archive** or **Plain File**) is used, you can manually specify the volume name.
 
-Thus, if you have multiple game slave files in your WHDL game partition and want to specify the game slave version to launch, the WHDLoad game must be mounted as a **Directory** and the slave file name (including the .slave extension) provided as the volume name. Otherwise, a selection dialogue will be used to ask the user to select a game slave file to launch.
+Thus, if you have multiple game slave files in your WHDL game partition and want to specify the game slave file to launch, the WHDLoad game must be mounted as a **Directory** and the game slave file name (including the .slave extension) is used as the volume name. Otherwise, a selection dialogue will be used to ask the user to select a game slave file to launch.
 
-**It is also recommended that both the WHDLoad DH0: and Games (collections) DH1: partition are mounted as as a directories - it just allows managing them much easier on the host emulation system, and you do not have to worry about the size of the .hdf file**
+**It is also recommended that both the WHDLoad boot DH0: and the Game/Games DH1: partition are mounted as as a directories - it just allows managing them much easier on the host emulation system**
 
 # Slave Selection mode
 
