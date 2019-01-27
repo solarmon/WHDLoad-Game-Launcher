@@ -105,8 +105,8 @@ See the diagram above for reference.
     - DH1: becomes READONLY
     - The Volume name must be in the following format:
       \<GameDirName\>.\<ext\>
-      Where <GameDirName> is the game subdirectory in the .lha or .zip file.
-      Where <ext> is the compression extension - either .lha or .zip
+      Where \<GameDirName\> is the game subdirectory in the .lha or .zip file.
+      Where \<ext\> is the compression extension - either .lha or .zip
     - The Volume name, including the extension cannot exceed 30 characters.
     - WHDLoad option **SavePath=SYS:WHDSaves** is added to allow save games to **DH0:WHDSaves**
 
@@ -192,6 +192,9 @@ When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, 
 
 # To Do / Roadmap
 
+* Parsing info using UAE config file
+  - This will allow more info to be passed (avoiding 30 character limit of Volume name)
+  - Use uae-configuration during startup-sequence to read custom UAE config entries.
 * More Game Launchers?
   - X-bEnCh (http://www.jimneray.com/xbench.html)(http://eab.abime.net/showthread.php?t=65633)
   - AGS2 (https://github.com/MagerValp/ArcadeGameSelector)(http://eab.abime.net/showthread.php?t=68818)
