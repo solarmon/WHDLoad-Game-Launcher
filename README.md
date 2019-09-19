@@ -172,7 +172,7 @@ The following options can be set from the main screen by pressing the following 
 * I - Enter **I**nfodesk
 * F - Change **F**ont - Topaz or Speccy-Gibs
 * H - Show **H**elp menu
-* C - Enable/Disable displayt of game **C**overs / screenshots / images
+* C - Enable/Disable display of game **C**overs / screenshots / images
 * B - Boot HD / CD
 * 0-4 - Set **Jump To**:
   - **0** = Disable/Enable Jump To
