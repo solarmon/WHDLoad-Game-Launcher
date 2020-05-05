@@ -167,6 +167,9 @@ The following options can be set from the main screen by pressing the following 
 
 * ESC - Exit
 * F10 - Exit with return code 5
+* A (on AZERTY keyboards) - **A**dd to Favorites (in Game memu)
+* Q (on QWERTY keyboards) - **A**dd to Favorites (in Game memu) 
+* D - **D**elete from Favorites (in Favorites menu)
 * R - Enable/disable **R**AD
 * T - Enable/Disable **T**ool Types
 * I - Enter **I**nfodesk
