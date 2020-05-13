@@ -183,7 +183,7 @@ The following options can be set from the main screen by pressing the following 
   - **2** = Demos
   - **3** = Mods
   - **4** = Favourites
-  * UP key / UP joystick direction - for one second activates **Fast Nav** mode
+* UP key / UP joystick direction - for one second activates **Fast Nav** mode
 
 When in a **Jump To** screen, use **0** to enable/disable Jump To. If disabled, you can use **ESC** to go back to the main screen.
 
